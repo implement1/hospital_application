@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Doctors</h1>
+
+<table class="ui selectable celled striped table padded">
+  <thead>
+    
+      <th class="center aligned">Name</th>
+      <th class="center aligned">Specialty</th>
+      <th class="center aligned">School</th>
+     
+    
+  </thead>
+
+  <tbody>
+    <% @doctors.each do |doctor| %>
+      <tr>
+        <td><%= doctor.name %></td>
+        <td><%= doctor.specialty %></td>
+        <td><%= doctor.school %></td>
+        <td><%= link_to 'Show', doctor %></td>
+        <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+        <td><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Doctor', new_doctor_path %>

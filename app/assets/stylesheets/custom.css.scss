@@ -1,0 +1,9 @@
+@import "semantic-ui";
+@import "semantic-ui/collections/menu";
+@import 'doctors';
+@import 'patients';
+@import 'appointments';
+
+* {
+    box-sizing: border-box;
+}
